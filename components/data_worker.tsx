@@ -111,7 +111,7 @@ async function start_IDB() { //if this resolves, the global variable 'db' should
 	return new Promise((resolve, reject) => {
 		db = "";
 		try {
-			const openRequest = indexedDB.open("students", 2);
+			const openRequest = indexedDB.open("students", 3);
 			openRequest.addEventListener("error", (error) => {
 	//			console.error("Failed to access local database.");
 	//			console.log(error);
@@ -123,9 +123,17 @@ async function start_IDB() { //if this resolves, the global variable 'db' should
 				resolve("Success");
 			}, {once: true});
 			openRequest.addEventListener("upgradeneeded", (event) => {
+				db = event.target?.result;
+				//delete the previous db because I am a bad programmer and I am using upgradeneeded to fix issues
+				//try/catch so that if it isn't there, it doesn't stop the whole thing
+				try {
+					db.deleteObjectStore("students");
+					console.log("Deleted old table");
+				} catch (err) {
+					console.error("Error in deleting students db on version change", err);
+				}
 				//set up the DB, and if nothing goes wrong (i.e. no errors) then resolve successfully
 	//			console.log("Setting up IDB");
-				db = event.target?.result;
 				const objStore = db.createObjectStore("students", {keyPath:"key", autoIncrement: false});
 				objStore.createIndex("students", "students", {unique: false}) //this will hold the array/json string of the response
 	//			console.log("Finished setting up IDB");
