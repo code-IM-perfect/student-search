@@ -312,8 +312,14 @@ export default function Home(props: Object) {
   else return (
   	<div style={{
   		width: "60%",
-  		margin:"auto"
-  	}}><h1>Please view this page at <a href="https://search.pclub.in" target="_blank">search.pclub.in</a></h1></div>
+  		margin:"auto",
+  		color:"white"
+  	}}><h1>Please view this page at <a href="https://search.pclub.in" target="_blank">search.pclub.in</a></h1>
+  	<p>Credits:</p>
+  	<p>Deven Gangwani</p>
+  	<p>Krishnansh Agarwal</p>
+  	<p>Programming Club, IITK</p>
+  	</div>
   );
 }
 
