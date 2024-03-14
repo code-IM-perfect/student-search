@@ -111,7 +111,7 @@ async function start_IDB() { //if this resolves, the global variable 'db' should
 	return new Promise((resolve, reject) => {
 		db = "";
 		try {
-			const openRequest = indexedDB.open("students", 1);
+			const openRequest = indexedDB.open("students", 2);
 			openRequest.addEventListener("error", (error) => {
 	//			console.error("Failed to access local database.");
 	//			console.log(error);
