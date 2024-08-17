@@ -4,7 +4,7 @@ import {Student, Query, Options} from  "./commontypes";
 var students: any[] = []
 var new_students: any[] | undefined = undefined;
 var config = {
-    "APP_ID": "data-yubip",
+    "APP_ID": "data-rgzxa",
     "API_KEY": "BFXDWTSqEFOXbk5kzCYsqV50vL4YjUQywDUfcE5wy0cD01SsJ7nLFduSzjE4Or3W",
     "cluster_name": "Cluster0",
     "db_name": "student_search",
