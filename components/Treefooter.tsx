@@ -8,7 +8,7 @@ export default function GuestFooter() {
         <Paper sx={{marginTop: 'calc(10% + 60px)',
         position: 'fixed',
         bottom: 0,
-        width: '100%'
+        width: '100%',
         }} component="footer" square variant="outlined">
         <Container maxWidth="lg">
           {/* <Box
@@ -27,14 +27,16 @@ export default function GuestFooter() {
               flexGrow: 1,
               justifyContent: "center",
               display: "flex",
-              mb: 2,
+              alignItems: "center",
+              mb: 0.5,
+              mt: 0.5
             }}
           >
-            <Typography variant="caption">
-                Family tree data provided by <a href="https://www.iitk.ac.in/counsel/">Counselling Service IITK</a>
+            <Typography variant="caption" sx={{fontSize: '0.80rem'}}>
+                Family tree provided by <a href="https://www.iitk.ac.in/counsel/">Institute Counselling Service IITK</a>
             </Typography>
             <div>
-                <img src="/cslogo.png" width={15} height={15} alt="Logo" />
+                <img src="/cslogo.png" width={18} height={18} style={{marginLeft: '8px'}} alt="Logo" />
             </div>
           </Box>
         </Container>
