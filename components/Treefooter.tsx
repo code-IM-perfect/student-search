@@ -34,7 +34,7 @@ export default function GuestFooter() {
           }}
         >
           <Typography variant="caption" sx={{ fontSize: '0.80rem' }}>
-            data by <a href="https://www.iitk.ac.in/counsel/">CS</a>
+            The Family Tree provided by Institute Counseling Service IITK<a href="https://www.iitk.ac.in/counsel/">CS</a>
           </Typography>
           <div>
             <img src="/cslogo.png" width={18} height={18} style={{ marginLeft: '8px' }} alt="Logo" />
